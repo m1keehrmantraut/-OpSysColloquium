@@ -1,0 +1,10 @@
+services:
+    app:
+      build:
+        context: app/
+      command: sh /start-reload.sh
+      volumes:
+        - ./app:/app
+      restart: always
+      ports:
+        - "8000:80"
